@@ -29,7 +29,7 @@ fun and(list:List<Boolean>):Boolean = when {
 }
 
 
-val l = listOf<Int>(1, 2, 3, 4, 5)
+private val l = listOf<Int>(1, 2, 3, 4, 5)
 
 fun foldr(initial:Int, func:(carriedResult:Int, next:Int) -> Int, list:List<Int>):Int {
     if (list.isEmpty()) return initial

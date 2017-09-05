@@ -33,7 +33,7 @@ fun pos(list:List<Int>, match:Int):List<Int> {
 
 // list comprehensions can be used to define functions on string, like counting the number of lower case letters in a string
 
-val l = listOf<Int>(1, 2, 3, 4)
+private val l = listOf<Int>(1, 2, 3, 4)
 
 fun main(args:Array<String>) {
     pairs(l).p()
