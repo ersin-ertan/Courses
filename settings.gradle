@@ -1,4 +1,6 @@
 rootProject.name = 'Courses'
 include 'FP101x Introduction to Functional Programming'
 findProject(':FP101x Introduction to Functional Programming')?.name = 'FP101x'
+include 'SD2x Data Structures and Software Design'
+findProject(':SD2x Data Structures and Software Design')?.name = 'SD2x'
 
