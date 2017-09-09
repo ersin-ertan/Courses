@@ -73,4 +73,4 @@ when(person){
 // look into operator modifier
 
 
-// List Patterns - ZZlists need a different form in pattern matching (cons form)
+// List Patterns - lists need a different form in pattern matching (cons form)
