@@ -4,13 +4,13 @@ package C_ListComprehensions
 // Write code that manipulates collections, most basic keywords for, do, while are to iterate over collections
 //
 // Sets are the most pure form of collection types but are awkward to work with because duplicate elements are removed,
-// thus you need equality to deal with sets. In functional languages, its hard to decide the equality  of functions.
+// thus you need equality to deal with sets. In functional languages, its hard to decide the equality of functions.
 
 // Java list streams can only access the elements one by one.
 
 // Set comprehensions - in mathematics the comprehension notation can be used to construct new sets from old
 
-// {x^2 | xE{...5}} // the set of 1,4,9, 16 of all numbers x^2 such that x is an element of the set {1...5}
+// {x^2 | x E {...5}} // the set of 1,4,9, 16 of all numbers x^2 such that x is an element of the set {1...5}
 
 // a generator defines how to generate values for x, like: x <-[1..5]
 
