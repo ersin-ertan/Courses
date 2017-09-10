@@ -203,6 +203,7 @@ fun listComprehensions() {
 
     val customSeq = buildSequence { (1..10).forEach { yieldIfOdd(it) } }
     customSeq.toList().p()
+
 }
 
 suspend fun SequenceBuilder<Int>.yieldIfOdd(i:Int) {
@@ -211,9 +212,11 @@ suspend fun SequenceBuilder<Int>.yieldIfOdd(i:Int) {
 
 private fun List<Int>.recursivePos(match:Int):List<Int> {
     var pos = size - 1 // fold right goes from right to left
-    return foldRight(mutableListOf(), { nextValue:Int, acc:MutableList<Int> ->
-        if (nextValue == match) acc.add(pos)
-        pos--
+    return foldRightIndexed(mutableListOf(), { index:Int, nextValue:Int, acc:MutableList<Int> ->
+        if (nextValue == match) acc.add(index)
+        // use foldRightIndexed, it will start from the right too, 4,3,2,1,0
+        print("index "); index.p()
+//        pos--
         acc // don't say return acc, the last value is evaluated as the return for the foldr, else it is evaluated for the whole function
     })
 }
@@ -225,4 +228,6 @@ fun main(args:Array<String>) {
 
     // foldRight returns the elements processed from right to left, thus our standard form is the result reversed
     listOf<Int>(1, 0, 1, 1, 0).recursivePos(1).asReversed().p()
+    listOf<Int>(1, 0, 1, 1, 0).withIndex().toList().p()
+
 }
