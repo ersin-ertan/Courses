@@ -7,4 +7,6 @@ include 'RITx GAME105x Gameplay Programming for Video Game Designers'
 findProject(':RITx GAME105x Gameplay Programming for Video Game Designers')?.name = 'RITx'
 include 'DEV285x Algorithms and Data Structures'
 findProject(':DEV285x Algorithms and Data Structures')?.name = 'DEV285x'
+include 'Algorithmic Toolbox'
+findProject(':Algorithmic Toolbox')?.name = 'algorithmicToolbox'
 

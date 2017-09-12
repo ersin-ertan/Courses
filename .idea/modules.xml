@@ -17,6 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SD2x.iml" filepath="$PROJECT_DIR$/.idea/modules/SD2x.iml" group="SD2x" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SD2x Data Structures and Software Design/SD2x_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SD2x Data Structures and Software Design/SD2x_main.iml" group="SD2x" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SD2x Data Structures and Software Design/SD2x_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SD2x Data Structures and Software Design/SD2x_test.iml" group="SD2x" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithmicToolbox.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithmicToolbox.iml" group="algorithmicToolbox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_main.iml" group="algorithmicToolbox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_test.iml" group="algorithmicToolbox" />
     </modules>
   </component>
 </project>
