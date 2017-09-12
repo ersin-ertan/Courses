@@ -2,7 +2,7 @@ import processing.core.PApplet
 
 // Unit 1: Drawing and Variables
 
-class Sketch0:PApplet() {
+class U1_Sketch0:PApplet() {
 
     val ySize = height/2F
 
@@ -10,9 +10,7 @@ class Sketch0:PApplet() {
         size(500, 500)
     }
 
-    override fun setup() {}
-
-    override fun draw() {
+    override fun setup() {
         background(255)
         fill(0F, 200F, 200F)
 
@@ -25,8 +23,11 @@ class Sketch0:PApplet() {
         fill(0F, 255F, 255F)
         ellipse(100F, 200F, width/2F, ySize)
     }
+
+    override fun draw() {}
+
 }
 
 fun main(args:Array<String>) {
-    PApplet.main(arrayOf("Sketch0"))
+    PApplet.main(arrayOf("U1_Sketch0"))
 }
