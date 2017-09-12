@@ -4,6 +4,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="Courses_main" target="1.8" />
       <module name="Courses_test" target="1.8" />
+      <module name="DEV285x_main" target="1.8" />
+      <module name="DEV285x_test" target="1.8" />
       <module name="FP101x_main" target="1.8" />
       <module name="FP101x_test" target="1.8" />
       <module name="RITx_main" target="1.8" />

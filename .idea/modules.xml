@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Courses.iml" filepath="$PROJECT_DIR$/.idea/modules/Courses.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Courses_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Courses_main.iml" group="Courses" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Courses_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Courses_test.iml" group="Courses" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DEV285x.iml" filepath="$PROJECT_DIR$/.idea/modules/DEV285x.iml" group="DEV285x" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DEV285x Algorithms and Data Structures/DEV285x_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DEV285x Algorithms and Data Structures/DEV285x_main.iml" group="DEV285x" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DEV285x Algorithms and Data Structures/DEV285x_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DEV285x Algorithms and Data Structures/DEV285x_test.iml" group="DEV285x" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FP101x.iml" filepath="$PROJECT_DIR$/.idea/modules/FP101x.iml" group="FP101x" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FP101x Introduction to Functional Programming/FP101x_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FP101x Introduction to Functional Programming/FP101x_main.iml" group="FP101x" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FP101x Introduction to Functional Programming/FP101x_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FP101x Introduction to Functional Programming/FP101x_test.iml" group="FP101x" />

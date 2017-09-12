@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":RITx:main" external.linked.project.path="$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":DEV285x:test" external.linked.project.path="$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="destination" value="$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/build/kotlin-classes/main" />
+          <option name="destination" value="$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/build/kotlin-classes/test" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
-          <option name="moduleName" value="RITx_main" />
+          <option name="moduleName" value="DEV285x_main" />
           <option name="jvmTarget" value="1.8" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
@@ -20,24 +20,27 @@
           <option name="pluginClasspaths">
             <array />
           </option>
-          <option name="version" value="true" />
         </compilerArguments>
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/kotlin" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/resources" type="java-resource" />
+    <content url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="DEV285x_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.4-3" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4-3" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.4-3" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="DEV285x_main" />
 </module>

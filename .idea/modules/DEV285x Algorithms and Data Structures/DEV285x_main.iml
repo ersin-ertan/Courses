@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":RITx:main" external.linked.project.path="$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":DEV285x:main" external.linked.project.path="$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="ca.ersin" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="destination" value="$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/build/kotlin-classes/main" />
+          <option name="destination" value="$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/build/kotlin-classes/main" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
-          <option name="moduleName" value="RITx_main" />
+          <option name="moduleName" value="DEV285x_main" />
           <option name="jvmTarget" value="1.8" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
@@ -26,12 +26,12 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/out/production/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/kotlin" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../RITx GAME105x Gameplay Programming for Video Game Designers/src/main/resources" type="java-resource" />
+    <content url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../DEV285x Algorithms and Data Structures/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
