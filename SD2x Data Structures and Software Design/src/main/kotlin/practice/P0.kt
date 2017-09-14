@@ -1,6 +1,8 @@
 package practice
 
+import org.jetbrains.annotations.TestOnly
 import p
+import java.util.*
 import kotlin.coroutines.experimental.buildSequence
 import kotlin.system.measureNanoTime
 
@@ -104,7 +106,7 @@ private class LinkedListP(initVal:Any? = null) {
     }
 }
 
-private class LinkedList() { // Work in process
+private class LinkedList1() { // Work in process
 
     private class Node(val value:Any, var next:Node? = null)
 
@@ -171,6 +173,186 @@ private class LinkedList() { // Work in process
 
 
 }
+
+private class LinkedList2<T>() {
+
+    private data class Node<T>(val value:T, var next:Node<T>? = null)
+
+    private var head:Node<T>? = null
+    private var tail:Node<T>? = null
+
+    private var size = 0
+    fun size() = size
+
+    val ioobe = IndexOutOfBoundsException()
+
+    constructor(value:T):this(listOf(value))
+    constructor(vararg values:T):this(values.toList())
+    constructor(collection:Collection<T>):this() {
+        collection.forEach { add(it) }
+    }
+
+
+    /*
+    * Add values
+    * */
+    fun add(addValue:T, index:Int? = null):Boolean = when {
+        index == null || size == index -> addLast(addValue)
+        index < 0 || index > size -> throwIndexOutOfBoundsException(index)
+        emptyAdd(addValue) -> true
+        else -> {
+            val prev = findPrev(index)
+            prev.next = Node(addValue, prev.next)
+            size++
+            true
+        }
+    }
+
+    fun addFirst(firstValue:T):Boolean = true.apply {
+        if (emptyAdd(firstValue))
+        else {
+            head = Node(firstValue, head)
+            size++
+        }
+    }
+
+    fun addLast(lastValue:T):Boolean = true.apply {
+        if (emptyAdd(lastValue))
+        else {
+            tail!!.next = Node(lastValue)
+            tail = tail!!.next
+            size++
+        }
+    }
+
+    /*
+    * Remove values
+    * */
+    fun removeAt(index:Int):T? = when {
+        !isValidRemoveIndex(index) -> throwIndexOutOfBoundsException<Nothing>(index)
+        index == 0 -> removeFirst()
+        index == size - 1 -> removeLast()
+        else -> {
+            val prev = findPrev(index)
+            val removedValue = prev.next!!.value
+            prev.next = prev.next?.next
+            size--
+            removedValue
+        }
+    }
+
+    fun remove(removeValue:T? = null):Boolean {
+        if (removeValue == null) removeLast()
+        else if (size == 0) throwIndexOutOfBoundsException<Nothing>(0)
+
+        var cur = head
+
+        (0 until size).forEach {
+            if (cur!!.value == removeValue) {
+                removeAt(it)
+                return true
+            }
+            cur = cur!!.next
+        }
+        return false
+    }
+
+
+    fun removeFirst():T {
+        if (!isValidRemoveIndex(0)) throwIndexOutOfBoundsException<Nothing>(0)
+        val removedValue = head!!.value
+        head = head!!.next
+        size--
+        return removedValue
+    }
+
+    fun removeLast():T {
+        if (!isValidRemoveIndex(size - 1)) throwIndexOutOfBoundsException<Nothing>(size - 1)
+        val prev = findPrev(size - 1)
+        val removedValue = prev.next!!.value
+        prev.next = null
+        tail = prev
+        size--
+        return removedValue
+    }
+
+    /*
+    * Others
+    * */
+    fun contains(containsValues:T):Boolean {
+        var cur = head
+        (0 until size).forEach {
+            if (cur!!.value == containsValues) {
+                return true
+            }
+            cur = cur!!.next
+        }
+        return false
+    }
+
+    /*
+    * Private helpers
+    * */
+    private fun findPrev(index:Int):Node<T> {
+        var prev = head!!
+        (0 until index - 1).forEach { prev = prev.next!! }
+        return prev
+    }
+
+    private fun emptyAdd(initialValue:T):Boolean =
+            if (size == 0) {
+                head = Node(initialValue)
+                tail = head
+                size++
+                true
+            } else false
+
+    private fun isValidRemoveIndex(removeIndex:Int?):Boolean = removeIndex == null || removeIndex > 0 || removeIndex < size
+
+    private fun <R> throwIndexOutOfBoundsException(index:Int?):R = throw IndexOutOfBoundsException("$index for ${0..size - 1}")
+
+    @TestOnly private fun headTailSize():String = "\nhead(${head?.value})\ttail(${tail?.value})\tsize(${size})\n"
+
+    /*
+    * Data overrides
+    * */
+    override fun toString():String = buildString {
+        append("[")
+        if (size > 0) {
+            var cur = head
+            append(cur!!.value)
+            cur = cur.next
+            while (cur != null) {
+                append(", ${cur.value}")
+                cur = cur.next
+            }
+        }
+        append("]")
+
+        // TODO comment out, debugging only
+        append(headTailSize())
+    }
+
+    override fun equals(other:Any?):Boolean = when {
+        other == null || other !is LinkedList2<*> ||
+                other.size() != size || other.head != head || other.tail != tail -> false
+        else -> {
+            val cur = head
+            val curO = other.head
+            (0 until size).forEach {
+                if (cur != curO) {
+                    return false
+                }
+            }
+            true
+        }
+    }
+
+    override fun hashCode():Int {
+        return super.hashCode()
+    }
+}
+
 
 fun main(args:Array<String>) {
 
@@ -243,28 +425,82 @@ fun main(args:Array<String>) {
         }).p()
     }
 
-//    java.util.LinkedList
+    fun p1() {
 
-    val ll = LinkedList(1, 2, 4)
-    ll.p()
-    ll.size().p()
-    ll.add(1)
-    ll.p()
-    ll.size().p()
-    print("adding 0 ")
-    ll.add(0, 0)
-    ll.p()
-    ll.size().p()
-    ll.add(9, 1)
-    ll.p()
-    ll.size().p()
-    ll.add(8, 2)
-    ll.p()
-    ll.size().p()
-    ll.add(7, ll.size())
-    ll.p()
-    ll.addLast(99)
-    ll.p()
+        val ll = LinkedList1(1, 2, 4)
+        ll.p()
+        ll.size().p()
+        ll.add(1)
+        ll.p()
+        ll.size().p()
+        print("adding 0 ")
+        ll.add(0, 0)
+        ll.p()
+        ll.size().p()
+        ll.add(9, 1)
+        ll.p()
+        ll.size().p()
+        ll.add(8, 2)
+        ll.p()
+        ll.size().p()
+        ll.add(7, ll.size())
+        ll.p()
+        ll.addLast(99)
+        ll.p()
+
+    }
+
+    val l = LinkedList2<Int>()
+    l.add(1)
+    l.p()
+    l.add(2, 1)
+    l.p()
+    l.add(2, 1)
+    l.p()
+    l.addLast(3)
+    l.p()
+    l.addFirst(0)
+    l.p()
+
+    l.removeLast()
+    l.p()
+    l.removeFirst()
+    l.p()
+    l.add(3)
+    l.add(4)
+    l.p()
+    l.add(5)
+    l.p()
+    l.remove()
+    l.p()
+
+    l.remove(2).p()
+    l.p()
+    l.remove(2).p()
+    l.p()
+    l.remove(2).p()
+    l.p()
+
+    l.remove(1).p()
+    l.p()
+
+    l.add(5)
+    l.add(6)
+    l.add(7)
+    l.add(8)
+    l.add(9)
+    l.p()
+    l.contains(9).p()
+    l.contains(10).p()
+    l.removeAt(0)
+    l.removeAt(l.size() - 1)
+    l.p()
+    l.removeAt(1)
+    l.p()
+    l.removeAt(2)
+    l.p()
+    l.removeAt(2)
+    l.p()
 
 
 }
