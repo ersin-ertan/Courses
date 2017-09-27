@@ -65,20 +65,34 @@ private class LinkedList3 {
         return false
     }
 
+    fun asList():List<Any> = // may be a good function externalsy, but should not be used for other internal funs
+            if (size == 0) emptyList<Any>()
+            else {
+                var cur = head
+                List<Any>(size, {
+                    val v = cur!!.value
+                    cur = cur?.nextNode
+                    v
+                })
+            }
 
     override fun toString():String {
-        return buildString {
-            append("[")
-            if (head != null) {
-                var cur = head
-                append(cur!!.value)
-                (1 until size).forEach {
-                    append(", ${cur!!.value}")
-                    cur = cur?.nextNode
-                }
-            }
-            append("]")
-        }
+        return asList().toString() // remember, we simply need the values as strings, not the space for
+        // another list, just a simple traversal
+        /*
+        buildString {
+                        append("[")
+                        if (head != null) {
+                            var cur = head
+                            append(cur!!.value)
+                            (1 until size).forEach {
+                                append(", ${cur!!.value}")
+                                cur = cur?.nextNode
+                            }
+                        }
+                        append("]")
+                    }
+    }*/
     }
 }
 
