@@ -2,7 +2,7 @@ package F_FunctionalParsersAndMonads
 
 import p
 
-// Parser - a program that analyses a piece of text to determine its syntactic structure
+// Parser: a program that analyses a piece of text to determine its syntactic structure
 // Almost every real life program uses some form of parsing to pre-process its input
 
 // parsers can naturally be view as functions: type Parser = String -> Tree
@@ -16,7 +16,7 @@ import p
 // Finally, a parser might not always produce a tree, so we generalize to a value of any type:
 // type Parser a = String -> [(a, String)]
 
-// For simplicity, we only consider parsers that either fail anad return the empty list of results, or succeed and
+// For simplicity, we only consider parsers that either fail and return the empty list of results, or succeed and
 // return and singleton list
 
 
@@ -42,5 +42,5 @@ fun main(args:Array<String>) {
 
 // the library Parsing is on the haskell home page
 
-// the Parser type is a monad, a mathematical structure that has proved useful for modeling many different kinds of
+// Parser type is a monad: a mathematical structure that has proved useful for modeling many different kinds of
 // computation

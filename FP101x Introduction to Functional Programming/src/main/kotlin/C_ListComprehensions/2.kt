@@ -29,7 +29,7 @@ fun pos(list:List<Int>, match:Int):List<Int> {
 // String comprehensions - is a sequence of characters enclosed in double quotes, internally they are represented
 // as a list of characters
 
-// because strings are special kinds of lists, any polymorphic function that operates on lists can bbe applied to strings
+// because strings are special kinds of lists, any polymorphic function that operates on lists can be applied to strings
 
 // list comprehensions can be used to define functions on string, like counting the number of lower case letters in a string
 
@@ -44,7 +44,7 @@ fun main(args:Array<String>) {
 
     pos(listOf(1,0,0,1,0,1,1,0), 0).p()
 
-    "abc".toList().zip(listOf(1,2,3,4)).p()
+    "abc".toList().zip(listOf(1,2,3,4)).p() // 4 is not used
 
     "Kotlin".filter { it.isLowerCase() }.count().p()
 }

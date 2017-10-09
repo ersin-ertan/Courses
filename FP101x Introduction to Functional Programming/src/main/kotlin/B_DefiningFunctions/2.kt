@@ -1,6 +1,6 @@
 package B_DefiningFunctions
 
-// lambda expressions - functions can be constructed without naming the function
+// Lambda expressions: functions can be constructed without naming the function
 
 // like a nameless function that takes a number n and returns the result of n+n
 val lambda = { i:Int -> i + i }
@@ -20,9 +20,11 @@ fun add(int:Int):(Int) -> Int = { int + it }
 
 // sections - an operator written between its two arguments that can bbe converted into a curried function written
 // before its two arguments by using parentheses
-// 1+2 vs
+// 1+2
+// vs
 // + 1 2
 // partial application (1+) 2 or (+2) 1
 
 // useful because functions can be constructed in a simple way using sections
 // (1+) successor function, (1/) reciprocation function, (*2) doubling function, (/2) halving
+

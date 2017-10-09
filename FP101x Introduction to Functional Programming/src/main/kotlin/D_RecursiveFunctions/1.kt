@@ -5,7 +5,24 @@ import kotlin.system.measureNanoTime
 
 // recursion - natural way to define functions, may use mathematical induction to prove properties of the function
 
-// tail call elimination -
+// tail call elimination - is writing a tail recursive function, which allows for the compiler to optimize the call
+// When the last call is recursive, it is equivalent to
+fun tcr(n:Int) {
+    if (n < 0) return
+    tcr(n - 1)
+}
+
+fun tcr1(n:Int) {
+    var nn = n
+    while (true) start@ {
+        if (n < 0) return@tcr1 // explicit, but not needed
+        else {
+            nn -= 1
+            return@start
+        }
+    }
+}
+
 
 fun factorialRecurse(int:Int):Int = if (int == 0) 1 else int * factorialRecurse(int - 1)
 // will stack overflow with negative numbers

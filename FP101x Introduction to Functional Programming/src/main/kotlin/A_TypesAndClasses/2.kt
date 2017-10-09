@@ -5,7 +5,7 @@ package A_TypesAndClasses
 fun not(b:Boolean) = !b // boolean -> boolean
 fun isDigit(c:Char) = c.isDigit() // char -> boolean
 
-// curried functions - that have multiple arguments that all returning functions as a result
+// curried functions - have multiple arguments, that all returns functions as a result
 
 fun add(a:Int):(Int) -> Int = { it -> a + it } // or
 fun add0(a:Int):(Int) -> Int = { a + it } // or
@@ -27,5 +27,6 @@ fun main(args:Array<String>) {
     println(add2(1, 6)) // not curried
 }
 
-// why is currying useful - curried functions are more flexible than functions on tuples, because useful functions
-// can often be made by partially applying a curried function
+// why is currying useful:
+// - curried functions are more flexible than functions on tuples
+// - functions can often be made by partially applying a curried function

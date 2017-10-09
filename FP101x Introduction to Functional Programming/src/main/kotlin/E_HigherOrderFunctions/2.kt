@@ -11,7 +11,7 @@ import p
 
 // f is a homomorphism over list by respecting the structure of the list
 
-// foldL -
+// foldL - folding from the other direction
 
 fun sum(list:List<Int>):Int = when {
     list.isEmpty() -> 0
@@ -65,6 +65,7 @@ fun main(args:Array<String>) {
     // look into reverse and generic fold
 }
 
-// why is foldr useful - sume recursive functions on list, like sum are simpler to define using foldr
-// properties of functions defined using foldr can be proven using algebraic properties of foldr, like fusion and banana split ruls
-// advanced program optimisations can be simpler if foldr is used in place of explicit recursion
+// why is foldr useful:
+// - sum recursive functions on list, like sum are simpler to define using foldr
+// - properties of functions defined using foldr can be proven using its algebraic properties, ex. fusion & banana split rules ?? what is this
+// - advanced program optimisations can be simpler if foldr is used in place of explicit recursion

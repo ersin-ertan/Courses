@@ -3,9 +3,9 @@ package A_TypesAndClasses
 import p
 
 
-// type classes and polymorphic functions
+// Type classes and polymorphic functions
 
-// polymorphic(of many forms) - a function if its type contains one or more type variables
+// Polymorphic(of many forms): a function if its type contains one or more type variables
 
 // personal implementations
 
@@ -36,8 +36,8 @@ fun zip(a:List<Any>, b:List<Any>):List<Any> {
 
 fun id(any:Any) = any.javaClass
 
-// overloaded functions - a polymorphic function whose type contains one or more class constraints
-// type constraint for Int
+// Qverloaded functions: a polymorphic function whose type contains one or more class constraints
+// Type constraint of Number, but it should be type constraint to Int, because (see comment below)
 
 /*fun <T:Number> sum(numList:List<T>):T {
 //    numList.sum() // or

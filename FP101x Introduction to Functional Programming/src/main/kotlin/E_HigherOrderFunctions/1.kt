@@ -2,7 +2,7 @@ package E_HigherOrderFunctions
 
 import p
 
-// higher order if it takes a function as an argument or returns a function as a result
+// Higher order function: takes a function as an argument or returns a function as a result
 
 val addOne = { int:Int -> int + 1 }
 
@@ -10,11 +10,12 @@ fun twice(func:(Int) -> Int, int:Int):Int {
     return func(func(int))
 }
 
-// why are they useful - common programming idioms can be encoded as functions within the language itself
-// domain specific languages can be defined as collections of higher order functions
-// algebraic properties of higher order functions can be used to reason about programs
+// Why are they useful
+// - common programming idioms can be encoded as functions within the language itself
+// - domain specific languages can be defined as collections of higher order functions
+// - algebraic properties of higher order functions can be used to reason about programs
 
-// map - applies a function to every element of a list
+// Map: applies a function to every element of a list
 
 fun map(list:MutableList<Int>, func:(Int) -> Int):List<Int> {
     (0 until list.size).forEach { list[it] = func(list[it]) }
