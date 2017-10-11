@@ -4,6 +4,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="algorithmicToolbox_main" target="1.8" />
       <module name="algorithmicToolbox_test" target="1.8" />
+      <module name="compilersTheoryAndPractice_main" target="1.8" />
+      <module name="compilersTheoryAndPractice_test" target="1.8" />
       <module name="Courses_main" target="1.8" />
       <module name="Courses_test" target="1.8" />
       <module name="DEV285x_main" target="1.8" />

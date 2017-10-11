@@ -20,6 +20,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithmicToolbox.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithmicToolbox.iml" group="algorithmicToolbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_main.iml" group="algorithmicToolbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithmic Toolbox/algorithmicToolbox_test.iml" group="algorithmicToolbox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/compilersTheoryAndPractice.iml" filepath="$PROJECT_DIR$/.idea/modules/compilersTheoryAndPractice.iml" group="compilersTheoryAndPractice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_main.iml" group="compilersTheoryAndPractice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_test.iml" group="compilersTheoryAndPractice" />
     </modules>
   </component>
 </project>

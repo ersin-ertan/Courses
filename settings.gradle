@@ -9,4 +9,6 @@ include 'DEV285x Algorithms and Data Structures'
 findProject(':DEV285x Algorithms and Data Structures')?.name = 'DEV285x'
 include 'Algorithmic Toolbox'
 findProject(':Algorithmic Toolbox')?.name = 'algorithmicToolbox'
+include 'Compilers Theory and Practice'
+findProject(':Compilers Theory and Practice')?.name = 'compilersTheoryAndPractice'
 
