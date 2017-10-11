@@ -23,6 +23,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/compilersTheoryAndPractice.iml" filepath="$PROJECT_DIR$/.idea/modules/compilersTheoryAndPractice.iml" group="compilersTheoryAndPractice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_main.iml" group="compilersTheoryAndPractice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Compilers Theory and Practice/compilersTheoryAndPractice_test.iml" group="compilersTheoryAndPractice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/programmingLanguages.iml" filepath="$PROJECT_DIR$/.idea/modules/programmingLanguages.iml" group="programmingLanguages" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Programming Languages/programmingLanguages_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Programming Languages/programmingLanguages_main.iml" group="programmingLanguages" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Programming Languages/programmingLanguages_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Programming Languages/programmingLanguages_test.iml" group="programmingLanguages" />
     </modules>
   </component>
 </project>

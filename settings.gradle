@@ -11,4 +11,6 @@ include 'Algorithmic Toolbox'
 findProject(':Algorithmic Toolbox')?.name = 'algorithmicToolbox'
 include 'Compilers Theory and Practice'
 findProject(':Compilers Theory and Practice')?.name = 'compilersTheoryAndPractice'
+include 'Programming Languages'
+findProject(':Programming Languages')?.name = 'programmingLanguages'
 

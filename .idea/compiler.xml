@@ -12,6 +12,8 @@
       <module name="DEV285x_test" target="1.8" />
       <module name="FP101x_main" target="1.8" />
       <module name="FP101x_test" target="1.8" />
+      <module name="programmingLanguages_main" target="1.8" />
+      <module name="programmingLanguages_test" target="1.8" />
       <module name="RITx_main" target="1.8" />
       <module name="RITx_test" target="1.8" />
       <module name="SD2x_main" target="1.8" />
