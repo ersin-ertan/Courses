@@ -1,5 +1,7 @@
 package lesson01
 
+import java.util.*
+
 // using a sub set of the language to practice concepts
 
 fun Any.p() = println(this)
@@ -36,6 +38,7 @@ fun main(args:Array<String>) {
 //    hyphenatedWords()
     // make fsm for r"(?:a|b)+(?:c|de)*f?"
 //    simulatingNondeterminism()
+    readingMachineMinds()
 }
 
 
@@ -296,25 +299,37 @@ fun simulatingNondeterminism() {
 }
 
 fun readingMachineMinds() {
-    val edges = mapOf(
+    val edges1 = mapOf(
             Pair(1, 'a') to listOf(2, 3),
             Pair(2, 'a') to listOf(2),
             Pair(3, 'b') to listOf(4, 2),
             Pair(4, 'c') to listOf(5))
-    val edges2 = mapOf(Pair(1, 'a') to 1, Pair(2, 'a') to 2)
-    val accepting = 5
+    val accepting1 = listOf(5)
 
-//    fun nfsmaccepts(cur:Int, e:Map<Pair<Int, Char>, List<Int>>, accept:Int, visited:List<Int>):String = when {
-//        cur == accept -> visited.jo
-//        e[cur]-> {
-//
-//        }
-//
-//        Pair(cur, input.first()) in e ->
-//            with(edges[Pair(cur, input.first())]) {
-//                // List<Int> accepting
-//                this!!.any { it -> nfsmaccepts(input.drop(1), it, e, accept) }
-//            }
-//        else -> false
-//    }
+
+    val edges2 = mapOf(Pair(1, 'a') to listOf(1), Pair(2, 'a') to listOf(2))
+    val accepting2 = listOf(2)
+
+    fun nfsmaccepts(cur:Int, edges:Map<Pair<Int, Char>, List<Int>>, accept:List<Int>, visited:List<Int>):Optional<String> =
+            when (cur) {
+                in visited -> Optional.empty()
+                in accept -> Optional.of("")
+                else -> {
+                    with(visited.plus(cur)) {
+                        edges.keys.forEach { pairIntChar ->
+                            if (pairIntChar.first == cur) edges[pairIntChar]!!.forEach {
+                                with(nfsmaccepts(it, edges, accept, this)) {
+                                    if (this.isPresent) return Optional.of(pairIntChar.second.plus(this.get()))
+                                }
+                            }
+                        }
+                    }
+                    Optional.empty<String>()
+                }
+            }
+
+    (nfsmaccepts(1, edges1, accepting1, listOf()).get()).p()
+    (nfsmaccepts(1, edges1, listOf(4), listOf()).get()).p()
+    (nfsmaccepts(1, edges2, accepting2, listOf()).isPresent).p()
+    (nfsmaccepts(1, edges2, listOf(1), listOf()).get().isBlank()).p()
 }
