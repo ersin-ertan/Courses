@@ -13,4 +13,6 @@ include 'Compilers Theory and Practice'
 findProject(':Compilers Theory and Practice')?.name = 'compilersTheoryAndPractice'
 include 'Programming Languages'
 findProject(':Programming Languages')?.name = 'programmingLanguages'
+include 'How to win coding competitions'
+findProject(':How to win coding competitions')?.name = 'I2CPx'
 
