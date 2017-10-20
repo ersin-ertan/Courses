@@ -7,9 +7,9 @@ import java.util.*
 fun Any.p() = println(this)
 
 
-fun doesfirstMatchSecond(s1:String, s2:String) = s1.substring(0, s1.indexOf(" ")) == s2.substring(s2.indexOf(" ") + 1)
+fun doesfirstMatchSecond(s1: String, s2: String) = s1.substring(0, s1.indexOf(" ")) == s2.substring(s2.indexOf(" ") + 1)
 
-fun main(args:Array<String>) {
+fun main(args: Array<String>) {
 
     fun intro() {
         "mifune toshirofun".indexOf("fun").p()
@@ -171,7 +171,7 @@ fun fsmEncoded() {
             Pair(3, '1') to 3)
     val accepting = listOf<Int>(3)
 
-    fun fsmSim(inputString:String, start:Int, edges:EdgeMap, accepting:List<Int>):Boolean = when {
+    fun fsmSim(inputString: String, start: Int, edges: EdgeMap, accepting: List<Int>): Boolean = when {
         inputString.isEmpty() -> start in accepting
         Pair(start, inputString.first()) in edges ->
             with(edges[Pair(start, inputString.first())]) { fsmSim(inputString.drop(1), this!!, edges, accepting) }
@@ -278,7 +278,7 @@ fun simulatingNondeterminism() {
             Pair(4, 'c') to listOf(5))
     val accepting = listOf(2, 5)
 
-    fun nfsmSim(input:String, cur:Int, e:Map<Pair<Int, Char>, List<Int>>, accept:List<Int>):Boolean = when {
+    fun nfsmSim(input: String, cur: Int, e: Map<Pair<Int, Char>, List<Int>>, accept: List<Int>): Boolean = when {
         input.isEmpty() -> cur in accept
         Pair(cur, input.first()) in e ->
             with(edges[Pair(cur, input.first())]) {
@@ -310,7 +310,7 @@ fun readingMachineMinds() {
     val edges2 = mapOf(Pair(1, 'a') to listOf(1), Pair(2, 'a') to listOf(2))
     val accepting2 = listOf(2)
 
-    fun nfsmaccepts(cur:Int, edges:Map<Pair<Int, Char>, List<Int>>, accept:List<Int>, visited:List<Int>):Optional<String> =
+    fun nfsmaccepts(cur: Int, edges: Map<Pair<Int, Char>, List<Int>>, accept: List<Int>, visited: List<Int>): Optional<String> =
             when (cur) {
                 in visited -> Optional.empty()
                 in accept -> Optional.of("")
