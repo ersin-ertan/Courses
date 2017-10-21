@@ -66,6 +66,7 @@ private class LinkedListP(initVal:Any? = null) {
     }
 
 
+    // no modification of tail, this is wrong
     fun remove(index:Int? = null):Boolean {
         return when {
             head == null -> false

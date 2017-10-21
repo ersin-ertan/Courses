@@ -3,24 +3,24 @@
   <component name="CompilerConfiguration">
     <option name="BUILD_PROCESS_HEAP_SIZE" value="2000" />
     <bytecodeTargetLevel target="1.8">
-      <module name="algorithmicToolbox_main" target="9" />
-      <module name="algorithmicToolbox_test" target="9" />
-      <module name="compilersTheoryAndPractice_main" target="9" />
-      <module name="compilersTheoryAndPractice_test" target="9" />
-      <module name="Courses_main" target="9" />
-      <module name="Courses_test" target="9" />
-      <module name="DEV285x_main" target="9" />
-      <module name="DEV285x_test" target="9" />
-      <module name="FP101x_main" target="9" />
-      <module name="FP101x_test" target="9" />
-      <module name="I2CPx_main" target="9" />
-      <module name="I2CPx_test" target="9" />
-      <module name="programmingLanguages_main" target="9" />
-      <module name="programmingLanguages_test" target="9" />
-      <module name="RITx_main" target="9" />
-      <module name="RITx_test" target="9" />
-      <module name="SD2x_main" target="9" />
-      <module name="SD2x_test" target="9" />
+      <module name="algorithmicToolbox_main" target="1.8" />
+      <module name="algorithmicToolbox_test" target="1.8" />
+      <module name="compilersTheoryAndPractice_main" target="1.8" />
+      <module name="compilersTheoryAndPractice_test" target="1.8" />
+      <module name="Courses_main" target="1.8" />
+      <module name="Courses_test" target="1.8" />
+      <module name="DEV285x_main" target="1.8" />
+      <module name="DEV285x_test" target="1.8" />
+      <module name="FP101x_main" target="1.8" />
+      <module name="FP101x_test" target="1.8" />
+      <module name="I2CPx_main" target="1.8" />
+      <module name="I2CPx_test" target="1.8" />
+      <module name="programmingLanguages_main" target="1.8" />
+      <module name="programmingLanguages_test" target="1.8" />
+      <module name="RITx_main" target="1.8" />
+      <module name="RITx_test" target="1.8" />
+      <module name="SD2x_main" target="1.8" />
+      <module name="SD2x_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
