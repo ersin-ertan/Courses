@@ -13,39 +13,46 @@ private class P1 {
 
         var size = 0
 
-        fun add(v: Any, i: Int? = null): Boolean {
-            when {
-                i == null || i == size -> tail?.let { t -> Node(v).let { t.n = it; tail = it } } ?: Node(v).let { tail = it; head = it }
-                i < 0 || i > size -> return false
-                else ->
-                    if (i == 0) head = Node(v, head)
-                    else {
-                        var p = head!!
-                        (1 until i).forEach { p = p.n!! }
-                        p.n = Node(v, p.n)
+        // only called when size > 0, to return a non null Node
+        private fun findPrevNode(i: Int): Node {
+            if (size == 0) throw IllegalStateException("No element is the list, cannot return Node")
+            return when (i) {
+                1 -> head!!
+                size -> tail!!
+                else -> {
+                    var p = head!!
+                    repeat(i - 1) { p = p.n!! }
+                    p
+                }
+            }
+        }
+
+        fun add(v: Any, i: Int = size): Boolean =
+                if (i < 0 || i > size) false
+                else {
+                    if (size == 0) Node(v).let { head = it; tail = it }
+                    else findPrevNode(i).let { it.n = Node(v, it.n) }
+                    size++
+                    true
+                }
+
+
+        fun remove(i: Int = size - 1): Boolean =
+                if (head == null || i < 0 || i >= size) false
+                else {
+                    if (i == 0) {
+                        head = head?.n
+                        if (head == null) tail = null
+                    } else {
+                        findPrevNode(i).let {
+                            it.n = it.n?.n
+                            if (i == size - 1) tail = it
+                        }
                     }
-            }
-            size++
-            return true
-        }
+                    size--
+                    true
+                }
 
-        fun remove(i: Int? = null): Boolean {
-            if (head == null || (i != null && (i < 0 || i >= size))) return false
-
-            val ii = i?.let { i } ?: size - 1
-            if (ii == 0) {
-                head = head!!.n
-                if (head == null) tail = null
-            } else {
-                var p = head!!
-                (1 until ii).forEach { p = p.n!! }
-                p.n = p.n?.n
-                if (ii == size - 1) tail = p
-            }
-
-            size--
-            return true
-        }
 
         operator fun contains(v: Any): Boolean {
             var cur = head
@@ -72,6 +79,7 @@ private class P1 {
     }
 
     fun test() {
+
         val l = LinkedList()
         l.add(1)
         l.p()
