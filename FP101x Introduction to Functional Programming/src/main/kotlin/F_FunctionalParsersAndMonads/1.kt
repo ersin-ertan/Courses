@@ -17,10 +17,17 @@ import p
 // type Parser a = String -> [(a, String)]
 
 // For simplicity, we only consider parsers that either fail and return the empty list of results, or succeed and
-// return and singleton list
+// return and singleton list(could use a maybe type)
 
 
 // Basic Parsers - the parser item fails if the input is empty, and consumes the first character otherwise:
+
+class Tree
+
+typealias Parser1 = (String) -> Tree
+typealias Parser2 = (String) -> Pair<Tree, String>
+typealias Parser3 = (String) -> List<Pair<Tree, String>>
+typealias Parser4<T> = (String) -> List<Pair<T, String>>
 
 fun basicParser(input:String):List<Pair<Char, String>> = when {
     input.count() == 0 -> emptyList()

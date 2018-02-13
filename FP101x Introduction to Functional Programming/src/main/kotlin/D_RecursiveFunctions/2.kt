@@ -1,7 +1,5 @@
 package D_RecursiveFunctions
 
-import p
-
 // Quicksort - sort a list recursively by decomposing the list, recursively sorting the lists, and combining the results
 
 // two rules - if empty, then sorted

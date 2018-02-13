@@ -1,7 +1,6 @@
 package practice
 
 import p
-import java.lang.reflect.Type
 import kotlin.coroutines.experimental.SequenceBuilder
 import kotlin.coroutines.experimental.buildIterator
 import kotlin.coroutines.experimental.buildSequence

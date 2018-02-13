@@ -2,7 +2,7 @@ group 'ca.ersin'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.2.21'
 
     repositories {
         mavenCentral()
@@ -19,11 +19,19 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'io.arrow-kt:arrow-core:0.6.1'
+    compile 'io.arrow-kt:arrow-typeclasses:0.6.1'
+    compile 'io.arrow-kt:arrow-data:0.6.1'
+    compile 'io.arrow-kt:arrow-instances:0.6.1'
+    compile 'io.arrow-kt:arrow-syntax:0.6.1'
+    kapt    'io.arrow-kt:arrow-annotations-processor:0.6.1'
 }
 
 compileKotlin {

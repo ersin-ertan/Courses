@@ -2,7 +2,6 @@ package practice
 
 import org.jetbrains.annotations.TestOnly
 import p
-import java.util.*
 import kotlin.coroutines.experimental.buildSequence
 import kotlin.system.measureNanoTime
 

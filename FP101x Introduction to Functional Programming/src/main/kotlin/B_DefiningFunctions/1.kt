@@ -120,7 +120,8 @@ fun changeSelection(item:FileOrFolder, selected:Boolean) = when {
     item is Folder && !selected -> selection - item
     item is File && selected -> selection + item
     item is File && !selected -> selection - item
-    else -> throw IllegalStateException("Not Flie or Folder") // wouldn't have to include this if sealed
+    else -> File()
+//    else -> throw Exception("Not Flie or Folder") // wouldn't have to include this if sealed
 }
 
 

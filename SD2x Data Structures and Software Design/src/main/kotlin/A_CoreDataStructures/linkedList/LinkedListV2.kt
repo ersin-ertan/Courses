@@ -1,7 +1,6 @@
 package A_CoreDataStructures.linkedList
 
 import p
-import java.util.*
 
 private data class Node1(val value:Any, var nextNode:Node1? = null)
 

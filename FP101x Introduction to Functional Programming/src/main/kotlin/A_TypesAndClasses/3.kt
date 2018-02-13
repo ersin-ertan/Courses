@@ -2,7 +2,6 @@ package A_TypesAndClasses
 
 import p
 
-
 // Type classes and polymorphic functions
 
 // Polymorphic(of many forms): a function if its type contains one or more type variables
@@ -12,10 +11,11 @@ import p
 fun <T:Collection<Any>> length(col:T):Int {
     var count = 0
     col.forEach { count++ }
+
     return count
 }
 
-fun first(col:Collection<Any>):Class<Any> = col.iterator().next().javaClass
+//fun first(col:Collection<Any>):Class<Any> = col.iterator().next().javaClass
 
 fun head(col:Collection<Any>):Any = col.iterator().next() // should throw an exception if empty
 
@@ -34,7 +34,7 @@ fun zip(a:List<Any>, b:List<Any>):List<Any> {
     }
 }
 
-fun id(any:Any) = any.javaClass
+//fun id(any:Any) = any.javaClass
 
 // Qverloaded functions: a polymorphic function whose type contains one or more class constraints
 // Type constraint of Number, but it should be type constraint to Int, because (see comment below)
@@ -52,7 +52,7 @@ fun main(args:Array<String>) {
     length(listOf(1, 3, 4)).p()
     length(listOf()).p()
 
-    first(listOf('a', 1, "a")).p()
+//    first(listOf('a', 1, "a")).p()
 
     head(listOf(1, 3)).p()
 
@@ -60,5 +60,5 @@ fun main(args:Array<String>) {
 
     zip(listOf(1, 2, 3), listOf(1)).p()
 
-    id(1).p()
+//    id(1).p()
 }
